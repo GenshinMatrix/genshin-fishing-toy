@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="Genshin">原神</s:String>
+    <s:String x:Key="FishingToy">釣り師</s:String>
+    <s:String x:Key="ButtonStart">ｽﾀｰﾄ</s:String>
+    <s:String x:Key="ButtonStop">ｽﾄｯﾌﾟ</s:String>
+    <s:String x:Key="ButtonOK">OK</s:String>
+    <s:String x:Key="Usage">使い方</s:String>
+    <s:String x:Key="UsageMessage" xml:space="preserve">0</s:String>
+    <s:String x:Key="UsageDetail">使い方を表示。</s:String>
+    <s:String x:Key="TopMost">最上位に表示</s:String>
+    <s:String x:Key="Exit">終了</s:String>
+    <s:String x:Key="VisitWebsite">プログラム更新</s:String>
+    <s:String x:Key="Tips">ヒント</s:String>
+    <s:String x:Key="RestorePos">右下に戻る</s:String>
+    <s:String x:Key="Restart">リスタート</s:String>
+    <s:String x:Key="LaunchGame">ケーム起動</s:String>
+    <s:String x:Key="Language">言語</s:String>
+    <s:String x:Key="SupportedOSVersionTips">本プログラムはＯＳバージョンが{0}もしくはそれより高いＯＳバージョンのみサポートしています。あなたのＯＳバージョンは{1}です。</s:String>
+    <s:String x:Key="OptionAutoLifting">自動リフティング</s:String>
+    <s:String x:Key="OptionShowRecognitionJigging">釣りの識別を表示（デバッグ）</s:String>
+    <s:String x:Key="OptionShowRecognitionLifting">リフティングの識別を表示（デバッグ）</s:String>
+    <s:String x:Key="RecognitionJiggingDebug">釣り識別デバッグ</s:String>
+    <s:String x:Key="RecognitionLiftingDebug">リフティング識別デバッグ</s:String>
+    <s:String x:Key="OptionLock">釣り枠をロック</s:String>
+    <s:String x:Key="ResetJiggingRegion">釣り枠をリセット</s:String>
+    <s:String x:Key="NotStarted">スタート待ち</s:String>
+    <s:String x:Key="Started">スタート済み</s:String>
+    <s:String x:Key="OpenConfigFile">配置ファイルを開く</s:String>
+    <s:String x:Key="OpenWithConfigFile">配置ファイルを開く (方法を選択して開く)</s:String>
+    <s:String x:Key="OpenWithNotepadConfigFile">配置ファイルを開く (メモ帳として開く)</s:String>
+    <s:String x:Key="ReloadConfigFile">配置ファイルをリロード</s:String>
+    <s:String x:Key="ReloadConfigFileDetail">配置ファイルをリロード。もしフォーマットが正しくない場合はデフォルトに戻す。</s:String>
+    <s:String x:Key="OpenConfigFileDetail">配置ファイルをオープン。ファイル変更後は手動でリロードしてください。</s:String>
+    <s:String x:Key="UsageMessageStepTitle">〔ステップ〕</s:String>
+    <s:String x:Key="UsageMessageTips">ヒント：必ずこのように釣り枠で囲むこと</s:String>
+    <s:String x:Key="UsageMessage1" xml:space="preserve">1. まずは半透明長方形の釣り枠を移動して識別区域を囲むこと、釣り枠のサイズは調整できる、釣りのプログレスバーを枠に入れるだけでいいので、下の丸い釣りプログレスを枠に入れないこと。</s:String>
+    <s:String x:Key="UsageMessage2" xml:space="preserve">2. 釣り枠が正しい位置を囲んだ後、「スタート」してください（ショートカットF11）。</s:String>
+    <s:String x:Key="UsageMessage3" xml:space="preserve">魚竿を振った後、魚が釣れるのを待つだけ、プログラムは自動的に画像識別に基づいて対応、マウスを任せて釣りを行う。</s:String>
+</ResourceDictionary>

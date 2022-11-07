@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="GenshinFishingToy.Views.UsageContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:gif="http://wpfanimatedgif.codeplex.com"
+             xmlns:local="clr-namespace:GenshinFishingToy.Views"
+             mc:Ignorable="d" FontSize="15" Width="NaN" Height="NaN"
+             d:DesignHeight="900" d:DesignWidth="900">
+    <StackPanel>
+        <Grid Margin="0,-10,0,0" Width="400" HorizontalAlignment="Left">
+            <Image gif:ImageBehavior.AnimatedSource="pack://application:,,,/GenshinFishingToy;component/Resources/demo.gif" gif:ImageBehavior.AnimationSpeedRatio="1.3" Margin="10"/>
+            <Border CornerRadius="10" BorderThickness="6" BorderBrush="White" Margin="5"/>
+        </Grid>
+        <Grid Margin="0,-15,0,0" Width="400" HorizontalAlignment="Left">
+            <Image Source="pack://application:,,,/GenshinFishingToy;component/Resources/demo.png" Margin="10"/>
+            <Border CornerRadius="10" BorderThickness="6" BorderBrush="White" Margin="5"/>
+            <Border CornerRadius="9" Background="White" Margin="0,0,0,15" HorizontalAlignment="Center" VerticalAlignment="Bottom" >
+                <TextBlock Text="{DynamicResource UsageMessageTips}" Foreground="Black" FontSize="15" Padding="10,2,10,5"/>
+            </Border>
+        </Grid>
+        <TextBlock Text="{DynamicResource UsageMessageStepTitle}" TextWrapping="Wrap" Margin="0,0,0,0"/>
+        <TextBlock Text="{DynamicResource UsageMessage1}" TextWrapping="Wrap" Margin="5,10,0,0"/>
+        <TextBlock Text="{DynamicResource UsageMessage2}" TextWrapping="Wrap" Margin="5,10,0,0"/>
+        <TextBlock Text="{DynamicResource UsageMessage3}" Foreground="#808080" TextWrapping="Wrap" Margin="0,10,0,0"/>
+    </StackPanel>
+</UserControl>

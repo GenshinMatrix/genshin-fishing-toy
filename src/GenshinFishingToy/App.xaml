@@ -1,0 +1,93 @@
+﻿<Application x:Class="GenshinFishingToy.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="http://schemas.modernwpf.com/2019"
+             xmlns:v="clr-namespace:GenshinFishingToy.Views"
+             xmlns:tb="http://www.hardcodet.net/taskbar"
+             xmlns:vm="clr-namespace:GenshinFishingToy.ViewModels"
+             xmlns:local="clr-namespace:GenshinFishingToy"
+             StartupUri="Views/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Languages/zh-cn.xaml"/>
+                <ResourceDictionary Source="/Resources/Languages/jp.xaml"/>
+                <ResourceDictionary Source="/Resources/Languages/en-us.xaml"/>
+                <ui:ThemeResources/>
+                <ui:XamlControlsResources/>
+                <ui:ResourceDictionaryEx/>
+                <ui:ColorPaletteResources/>
+                <ui:IntellisenseResources/>
+            </ResourceDictionary.MergedDictionaries>
+            <v:AddConverter x:Key="AddConverter"/>
+            <v:LanguageToBoolConverter x:Key="LanguageToBoolConverter"/>
+            <FontFamily x:Key="SegoeFluent">/Resources/segoe-fluent-icons.ttf#Segoe Fluent Icons</FontFamily>
+            <tb:TaskbarIcon x:Key="PART_Taskbar"
+                            IconSource="Resources/favicon.ico"
+                            ToolTipText="Genshin Fishing Toy"
+                            DoubleClickCommand="{Binding ShowOrHideCommand}">
+                <tb:TaskbarIcon.DataContext>
+                    <vm:NotifyIconViewModel/>
+                </tb:TaskbarIcon.DataContext>
+                <tb:TaskbarIcon.ContextMenu>
+                    <ContextMenu Padding="0,5" MinWidth="160">
+                        <MenuItem Header="{DynamicResource Usage}" Command="{Binding UsageCommand}">
+                            <MenuItem.ToolTip>
+                                <TextBlock>
+                        <Run Text="{DynamicResource UsageDetail}"/>
+                                </TextBlock>
+                            </MenuItem.ToolTip>
+                            <MenuItem.Icon>
+                                <TextBlock Text="&#xf71c;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="{DynamicResource VisitWebsite}" Command="{Binding GitHubCommand}">
+                            <MenuItem.Icon>
+                                <TextBlock Text="&#xe774;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <Separator/>
+                        <MenuItem Header="{DynamicResource LaunchGame}" Command="{Binding LaunchGameCommand}">
+                            <MenuItem.Icon>
+                                <TextBlock Text="&#xe7fc;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <Separator/>
+                        <MenuItem Header="{DynamicResource Language}">
+                            <MenuItem.Icon>
+                                <TextBlock Text="&#xf2b7;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
+                            </MenuItem.Icon>
+                            <MenuItem.Items>
+                                <MenuItem Header="简体中文" Command="{Binding LanguageZH}" IsCheckable="False" IsChecked="{Binding Language,Converter={StaticResource LanguageToBoolConverter},ConverterParameter=zh-cn}">
+                                    <MenuItem.Icon>
+                                        <TextBlock Text="&#xe88d;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Header="日本語" Command="{Binding LanguageJP}" IsCheckable="False" IsChecked="{Binding Language,Converter={StaticResource LanguageToBoolConverter},ConverterParameter=jp}">
+                                    <MenuItem.Icon>
+                                        <TextBlock Text="&#xe7de;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Header="English" Command="{Binding LanguageEN}" IsCheckable="False" IsChecked="{Binding Language,Converter={StaticResource LanguageToBoolConverter},ConverterParameter=en-us}">
+                                    <MenuItem.Icon>
+                                        <TextBlock Text="&#xe983;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem.Items>
+                        </MenuItem>
+                        <MenuItem Header="{DynamicResource Restart}" Command="{Binding RestartCommand}">
+                            <MenuItem.Icon>
+                                <TextBlock Text="&#xe777;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="{DynamicResource Exit}" Command="{Binding ExitCommand}">
+                            <MenuItem.Icon>
+                                <TextBlock Text="&#xe7e8;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </tb:TaskbarIcon.ContextMenu>
+            </tb:TaskbarIcon>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

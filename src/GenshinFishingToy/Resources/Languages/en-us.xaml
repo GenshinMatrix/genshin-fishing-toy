@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="Genshin">Genshin</s:String>
+    <s:String x:Key="FishingToy">FishingToy</s:String>
+    <s:String x:Key="ButtonStart">Start</s:String>
+    <s:String x:Key="ButtonStop">Stop</s:String>
+    <s:String x:Key="ButtonOK">OK</s:String>
+    <s:String x:Key="Usage">Usage</s:String>
+    <s:String x:Key="UsageMessage" xml:space="preserve">0</s:String>
+    <s:String x:Key="UsageDetail">Prompt for usage.</s:String>
+    <s:String x:Key="TopMost">Top Most</s:String>
+    <s:String x:Key="Exit">Exit</s:String>
+    <s:String x:Key="VisitWebsite">Software Updates</s:String>
+    <s:String x:Key="Tips">Tips</s:String>
+    <s:String x:Key="RestorePos">Restore Position</s:String>
+    <s:String x:Key="Restart">Restart</s:String>
+    <s:String x:Key="LaunchGame">Launch Game</s:String>
+    <s:String x:Key="Language">Language</s:String>
+    <s:String x:Key="SupportedOSVersionTips">We only support running on an OS version higher than {0}. Your OS version is {1}.</s:String>
+    <s:String x:Key="OptionAutoLifting">Auto Lifting</s:String>
+    <s:String x:Key="OptionShowRecognitionJigging">Show jigging recognition (Debug)</s:String>
+    <s:String x:Key="OptionShowRecognitionLifting">Show lifting recognition (Debug)</s:String>
+    <s:String x:Key="RecognitionJiggingDebug">Jigging recognition debug</s:String>
+    <s:String x:Key="RecognitionLiftingDebug">Lifting recognition debug</s:String>
+    <s:String x:Key="OptionLock">Lock fishing region</s:String>
+    <s:String x:Key="ResetJiggingRegion">Reset fishing region</s:String>
+    <s:String x:Key="NotStarted">Not started</s:String>
+    <s:String x:Key="Started">Started</s:String>
+    <s:String x:Key="OpenConfigFile">Open Config File</s:String>
+    <s:String x:Key="OpenWithConfigFile">Open Config File (Open with)</s:String>
+    <s:String x:Key="OpenWithNotepadConfigFile">Open Config File (Open with Notepad)</s:String>
+    <s:String x:Key="ReloadConfigFile">Reload Config File</s:String>
+    <s:String x:Key="ReloadConfigFileDetail">Reload the configuration file. If the configuration format is incorrect, it will be restored to the default value.</s:String>
+    <s:String x:Key="OpenConfigFileDetail">Open the loading configuration file, and reload it manually after modification.</s:String>
+    <s:String x:Key="UsageMessageStepTitle">[Step]</s:String>
+    <s:String x:Key="UsageMessageTips">Tips: Must frame region like it.</s:String>
+    <s:String x:Key="UsageMessage1" xml:space="preserve">1. First, move the jigging region to select the recognition region, and you also can resize the region. Just frame the fishing progress bar. Don't frame the fishing progress circle below.</s:String>
+    <s:String x:Key="UsageMessage2" xml:space="preserve">2. After confirming that the region position is correct, you can start auto fishing (Shortcut F11).</s:String>
+    <s:String x:Key="UsageMessage3" xml:space="preserve">After the rod is thrown, just waiting for the fish to hook up. The program will auto control mouse according to the image recognition results and complete the fishing progress.</s:String>
+</ResourceDictionary>

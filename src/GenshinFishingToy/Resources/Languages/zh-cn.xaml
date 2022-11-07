@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="Genshin">原神</s:String>
+    <s:String x:Key="FishingToy">钓鱼姫</s:String>
+    <s:String x:Key="ButtonStart">启动</s:String>
+    <s:String x:Key="ButtonStop">停止</s:String>
+    <s:String x:Key="ButtonOK">好的</s:String>
+    <s:String x:Key="Usage">使用方法</s:String>
+    <s:String x:Key="UsageMessage" xml:space="preserve">0</s:String>
+    <s:String x:Key="UsageDetail">提示使用方法。</s:String>
+    <s:String x:Key="TopMost">顶层显示</s:String>
+    <s:String x:Key="Exit">退出</s:String>
+    <s:String x:Key="VisitWebsite">程序更新</s:String>
+    <s:String x:Key="Tips">提示</s:String>
+    <s:String x:Key="RestorePos">恢复到右下角</s:String>
+    <s:String x:Key="Restart">重启</s:String>
+    <s:String x:Key="LaunchGame">启动游戏</s:String>
+    <s:String x:Key="Language">语言</s:String>
+    <s:String x:Key="SupportedOSVersionTips">我们仅支持系统版本高于{0}。您的系统版本为{1}。</s:String>
+    <s:String x:Key="OptionAutoLifting">自动提竿</s:String>
+    <s:String x:Key="OptionShowRecognitionJigging">显示饵钓识别（调试）</s:String>
+    <s:String x:Key="OptionShowRecognitionLifting">显示提竿识别（调试）</s:String>
+    <s:String x:Key="RecognitionJiggingDebug">饵钓识别调试</s:String>
+    <s:String x:Key="RecognitionLiftingDebug">提竿识别调试</s:String>
+    <s:String x:Key="OptionLock">锁定钓鱼框</s:String>
+    <s:String x:Key="ResetJiggingRegion">重置钓鱼框</s:String>
+    <s:String x:Key="NotStarted">未启动</s:String>
+    <s:String x:Key="Started">已启动</s:String>
+    <s:String x:Key="OpenConfigFile">打开配置文件</s:String>
+    <s:String x:Key="OpenWithConfigFile">打开配置文件 (重设方式打开)</s:String>
+    <s:String x:Key="OpenWithNotepadConfigFile">打开配置文件 (以记事本方式打开)</s:String>
+    <s:String x:Key="ReloadConfigFile">重载配置文件</s:String>
+    <s:String x:Key="ReloadConfigFileDetail">重新加载配置文件，若配置格式不正确则会恢复为默认值。</s:String>
+    <s:String x:Key="OpenConfigFileDetail">打开加载配置文件，修改后请手动重新加载。</s:String>
+    <s:String x:Key="UsageMessageStepTitle">〔使用步骤〕</s:String>
+    <s:String x:Key="UsageMessageTips">友情提示：一定要像这样框钓鱼区</s:String>
+    <s:String x:Key="UsageMessage1" xml:space="preserve">1. 首先移动半透明矩形选区选择识别范围，钓鱼框可调整大小，只需要框住钓鱼进度条就可以了，不要框住下方的钓鱼总进度圈。</s:String>
+    <s:String x:Key="UsageMessage2" xml:space="preserve">2. 确认选框位置正确后，就直接启动进行自动钓鱼啦（快捷键F11）。</s:String>
+    <s:String x:Key="UsageMessage3" xml:space="preserve">甩竿后直接等待鱼儿上钩即可，保持当前原神窗口是激活状态，程序会自动根据当前图像识别的结果发送对应鼠标操作，自动化提竿、完成钓鱼进度。</s:String>
+</ResourceDictionary>
