@@ -18,7 +18,7 @@ PC原神自动钓鱼机（支持不同游戏窗口大小）。
 
 ## 程序界面
 
-![](/src/GenshinFishingToy/Resources/demo.gif)
+<img src="/src/GenshinFishingToy/Resources/demo.gif" style="zoom:100%;border 0px solid white;border-radius:10px" />
 
 ![](assets/image1.zh.png)
 
@@ -26,14 +26,20 @@ PC原神自动钓鱼机（支持不同游戏窗口大小）。
 
 ## 使用方法
 
+<img src="src/GenshinFishingToy/Resources/demo.png" alt="demo" style="zoom:80%;border 0px solid white;border-radius:10px" />
+
 1. 首先移动半透明矩形钓鱼框选择识别范围，钓鱼框可调整大小，只需要框住钓鱼进度条就可以了，<font color='red'> 不要框住下方的钓鱼总进度圈 </font>。
 
 2. 确认选框位置正确后，就直接启动进行自动钓鱼啦（快捷键<kbd>F11</kbd>）。
 
-> 甩竿后直接等待鱼儿上钩即可，程序会自动根据当前图像识别的结果发送对应鼠标操作，自动化提竿、完成钓鱼进度。
+> - 甩竿后直接等待鱼儿上钩即可，程序会自动根据当前图像识别的结果发送对应鼠标操作，自动化提竿、完成钓鱼进度。
+>
+> - 如果无法正常自动模拟按键，请尝试将本程序添加至杀软白名单，或关闭杀软后使用。
 
 ## 常见问题
 - 如果不在钓鱼的时候最好还是停止钓鱼功能。
+- 无法自动提竿的话请尝试调高条框的高度。
+  
 - 若安装包无法安装，请确保你的系统已安装应用商店，安装包依赖商店架构 (MSIX)。
 
 - 运行环境是net6.0-windows10.0.18362.0。
