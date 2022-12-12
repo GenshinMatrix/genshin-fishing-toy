@@ -43,3 +43,4 @@ The simplest automatic fishing machine has its own GUI. Select the fishing box a
 
 - Runtime environment isnet6.0-windows10.0.18362.0.
 
+- The fullscreen mode user is recommended to use the windowed in the whole process instead of full screen (shortcut key in the game<kbd>Alt</kbd>+<kbd>Enter</kbd>).
