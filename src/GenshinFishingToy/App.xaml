@@ -13,10 +13,10 @@
                 <ResourceDictionary Source="/Resources/Languages/zh-cn.xaml"/>
                 <ResourceDictionary Source="/Resources/Languages/jp.xaml"/>
                 <ResourceDictionary Source="/Resources/Languages/en-us.xaml"/>
-                <ui:ThemeResources/>
+                <ui:ThemeResources RequestedTheme="Light"/>
                 <ui:XamlControlsResources/>
                 <ui:ResourceDictionaryEx/>
-                <ui:ColorPaletteResources/>
+                <ui:ColorPaletteResources TargetTheme="Light"/>
                 <ui:IntellisenseResources/>
             </ResourceDictionary.MergedDictionaries>
             <v:AddConverter x:Key="AddConverter"/>
