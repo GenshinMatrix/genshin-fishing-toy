@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GenshinFishingToy.Views"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
         xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
         xmlns:main="clr-namespace:GenshinFishingToy"
         mc:Ignorable="d" Closed="MainWindowClosed"
@@ -119,6 +120,11 @@
                                 </MenuItem.Icon>
                             </MenuItem>
                             <Separator/>
+                            <MenuItem Header="{DynamicResource OptionShowRecognitionCapture}" IsChecked="{Binding OptionShowRecognitionCapture}" IsCheckable="True">
+                                <MenuItem.Icon>
+                                    <TextBlock Text="&#xe89e;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
                             <MenuItem Header="{DynamicResource OptionShowRecognitionJigging}" IsChecked="{Binding OptionShowRecognitionJigging}" IsCheckable="True">
                                 <MenuItem.Icon>
                                     <TextBlock Text="&#xe89e;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
@@ -128,6 +134,26 @@
                                 <MenuItem.Icon>
                                     <TextBlock Text="&#xe89e;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
                                 </MenuItem.Icon>
+                            </MenuItem>
+                            <Separator/>
+                            <MenuItem Header="{DynamicResource ImageCaptureType}" >
+                                <MenuItem.Icon>
+                                    <TextBlock Text="&#xf7ee;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
+                                </MenuItem.Icon>
+                                <ui:RadioMenuItem Header="{DynamicResource ImageCaptureTypeBitBlt}"
+                                                  IsChecked="{Binding IsImageCaptureTypeIsBitBlt,Mode=TwoWay}"
+                                                  Command="{Binding SetImageCaptureTypeCommand}" CommandParameter="BitBlt">
+                                    <MenuItem.Icon>
+                                        <TextBlock Text="&#xf7ee;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
+                                    </MenuItem.Icon>
+                                </ui:RadioMenuItem>
+                                <ui:RadioMenuItem Header="{DynamicResource ImageCaptureTypeWindowsGraphicsCapture}"
+                                                  IsChecked="{Binding IsImageCaptureTypeIsWindowsGraphicsCapture,Mode=TwoWay}"
+                                                  Command="{Binding SetImageCaptureTypeCommand}" CommandParameter="WindowsGraphicsCapture">
+                                    <MenuItem.Icon>
+                                        <TextBlock Text="&#xf7ee;" FontSize="8" FontFamily="{StaticResource SegoeFluent}"/>
+                                    </MenuItem.Icon>
+                                </ui:RadioMenuItem>
                             </MenuItem>
                             <Separator/>
                             <MenuItem Header="{DynamicResource Usage}" Command="{Binding UsageCommand}">

@@ -7,6 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenshinFishingToy", "Genshi
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "GenshinFishingToySetup", "GenshinFishingToySetup\GenshinFishingToySetup.wapproj", "{A80A34DD-ACBC-4D67-A22D-156A0FFC32A8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsGraphicsCapture", "WindowsGraphicsCapture", "{61B278E1-2049-475B-B200-3F0C3DDA87C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScreenCapture", "WindowsGraphicsCapture\ScreenCapture\ScreenCapture.csproj", "{AB145A23-0897-4517-8EA6-BEB87CB9D26A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaptureSampleCore", "WindowsGraphicsCapture\CaptureSampleCore\CaptureSampleCore.csproj", "{D8154C31-38C2-49E2-96A0-69EB76567461}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composition.WindowsRuntimeHelpers", "WindowsGraphicsCapture\Composition.WindowsRuntimeHelpers\Composition.WindowsRuntimeHelpers.csproj", "{AE6F99F5-AFD5-467E-A082-D4003E3EEECF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -23,9 +31,26 @@ Global
 		{A80A34DD-ACBC-4D67-A22D-156A0FFC32A8}.Release|x64.ActiveCfg = Release|x64
 		{A80A34DD-ACBC-4D67-A22D-156A0FFC32A8}.Release|x64.Build.0 = Release|x64
 		{A80A34DD-ACBC-4D67-A22D-156A0FFC32A8}.Release|x64.Deploy.0 = Release|x64
+		{AB145A23-0897-4517-8EA6-BEB87CB9D26A}.Debug|x64.ActiveCfg = Debug|x64
+		{AB145A23-0897-4517-8EA6-BEB87CB9D26A}.Debug|x64.Build.0 = Debug|x64
+		{AB145A23-0897-4517-8EA6-BEB87CB9D26A}.Release|x64.ActiveCfg = Release|x64
+		{AB145A23-0897-4517-8EA6-BEB87CB9D26A}.Release|x64.Build.0 = Release|x64
+		{D8154C31-38C2-49E2-96A0-69EB76567461}.Debug|x64.ActiveCfg = Debug|x64
+		{D8154C31-38C2-49E2-96A0-69EB76567461}.Debug|x64.Build.0 = Debug|x64
+		{D8154C31-38C2-49E2-96A0-69EB76567461}.Release|x64.ActiveCfg = Release|x64
+		{D8154C31-38C2-49E2-96A0-69EB76567461}.Release|x64.Build.0 = Release|x64
+		{AE6F99F5-AFD5-467E-A082-D4003E3EEECF}.Debug|x64.ActiveCfg = Debug|x64
+		{AE6F99F5-AFD5-467E-A082-D4003E3EEECF}.Debug|x64.Build.0 = Debug|x64
+		{AE6F99F5-AFD5-467E-A082-D4003E3EEECF}.Release|x64.ActiveCfg = Release|x64
+		{AE6F99F5-AFD5-467E-A082-D4003E3EEECF}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB145A23-0897-4517-8EA6-BEB87CB9D26A} = {61B278E1-2049-475B-B200-3F0C3DDA87C2}
+		{D8154C31-38C2-49E2-96A0-69EB76567461} = {61B278E1-2049-475B-B200-3F0C3DDA87C2}
+		{AE6F99F5-AFD5-467E-A082-D4003E3EEECF} = {61B278E1-2049-475B-B200-3F0C3DDA87C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DFA8F1CD-513D-45D7-856D-378146C4D367}

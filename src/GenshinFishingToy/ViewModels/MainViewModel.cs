@@ -15,7 +15,7 @@ using System.Windows.Media;
 
 namespace GenshinFishingToy.ViewModels;
 
-public class MainViewModel : ObservableRecipient
+public partial class MainViewModel : ObservableRecipient
 {
     public MainWindow Source { get; set; } = null!;
     internal ImageJigging jigging = new();
@@ -51,6 +51,16 @@ public class MainViewModel : ObservableRecipient
         set
         {
             Settings.ShowRecognitionJigging.Set(value);
+            SettingsManager.Save();
+        }
+    }
+
+    public bool OptionShowRecognitionCapture
+    {
+        get => Settings.ShowRecognitionCapture;
+        set
+        {
+            Settings.ShowRecognitionCapture.Set(value);
             SettingsManager.Save();
         }
     }
@@ -212,5 +222,25 @@ public class MainViewModel : ObservableRecipient
     public async Task StopFishing()
     {
         await jigging.StopFishing();
+    }
+
+    [ObservableProperty]
+    private bool isImageCaptureTypeIsBitBlt = Settings.CaptureType.Get().Equals(nameof(ImageCaptureType.BitBlt));
+
+    [ObservableProperty]
+    private bool isImageCaptureTypeIsWindowsGraphicsCapture = Settings.CaptureType.Get().Equals(nameof(ImageCaptureType.WindowsGraphicsCapture));
+
+    [RelayCommand]
+    public void SetImageCaptureType(string captureType)
+    {
+        if (jigging.IsRunning)
+        {
+            IsImageCaptureTypeIsBitBlt = Settings.CaptureType.Get().Equals(nameof(ImageCaptureType.BitBlt));
+            IsImageCaptureTypeIsWindowsGraphicsCapture = Settings.CaptureType.Get().Equals(nameof(ImageCaptureType.WindowsGraphicsCapture));
+            return;
+        }
+        ImageCapture.CaptureType = (ImageCaptureType)Enum.Parse(typeof(ImageCaptureType), captureType);
+        Settings.CaptureType.Set(ImageCapture.CaptureType.ToString());
+        SettingsManager.Save();
     }
 }

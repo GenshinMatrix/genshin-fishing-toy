@@ -19,12 +19,16 @@
     <s:String x:Key="Language">语言</s:String>
     <s:String x:Key="SupportedOSVersionTips">我们仅支持系统版本高于{0}。您的系统版本为{1}。</s:String>
     <s:String x:Key="OptionAutoLifting">自动提竿</s:String>
+    <s:String x:Key="OptionShowRecognitionCapture">显示采集识别（调试）</s:String>
     <s:String x:Key="OptionShowRecognitionJigging">显示饵钓识别（调试）</s:String>
     <s:String x:Key="OptionShowRecognitionLifting">显示提竿识别（调试）</s:String>
     <s:String x:Key="RecognitionJiggingDebug">饵钓识别调试</s:String>
     <s:String x:Key="RecognitionLiftingDebug">提竿识别调试</s:String>
     <s:String x:Key="OptionLock">锁定钓鱼框</s:String>
     <s:String x:Key="ResetJiggingRegion">重置钓鱼框</s:String>
+    <s:String x:Key="ImageCaptureType">图像采集模式</s:String>
+    <s:String x:Key="ImageCaptureTypeBitBlt">BitBlt (Windows 7 或更新版本)</s:String>
+    <s:String x:Key="ImageCaptureTypeWindowsGraphicsCapture">Windows 10 (1903或更新版本)</s:String>
     <s:String x:Key="NotStarted">未启动</s:String>
     <s:String x:Key="Started">已启动</s:String>
     <s:String x:Key="OpenConfigFile">打开配置文件</s:String>

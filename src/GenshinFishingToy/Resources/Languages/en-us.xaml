@@ -19,12 +19,16 @@
     <s:String x:Key="Language">Language</s:String>
     <s:String x:Key="SupportedOSVersionTips">We only support running on an OS version higher than {0}. Your OS version is {1}.</s:String>
     <s:String x:Key="OptionAutoLifting">Auto Lifting</s:String>
+    <s:String x:Key="OptionShowRecognitionCapture">Show captupe recognition (Debug)</s:String>
     <s:String x:Key="OptionShowRecognitionJigging">Show jigging recognition (Debug)</s:String>
     <s:String x:Key="OptionShowRecognitionLifting">Show lifting recognition (Debug)</s:String>
     <s:String x:Key="RecognitionJiggingDebug">Jigging recognition debug</s:String>
     <s:String x:Key="RecognitionLiftingDebug">Lifting recognition debug</s:String>
     <s:String x:Key="OptionLock">Lock fishing region</s:String>
     <s:String x:Key="ResetJiggingRegion">Reset fishing region</s:String>
+    <s:String x:Key="ImageCaptureType">Image Capture Type</s:String>
+    <s:String x:Key="ImageCaptureTypeBitBlt">BitBlt (Windows 7 and up)</s:String>
+    <s:String x:Key="ImageCaptureTypeWindowsGraphicsCapture">Windows 10 (1903 and up)</s:String>
     <s:String x:Key="NotStarted">Not started</s:String>
     <s:String x:Key="Started">Started</s:String>
     <s:String x:Key="OpenConfigFile">Open Config File</s:String>

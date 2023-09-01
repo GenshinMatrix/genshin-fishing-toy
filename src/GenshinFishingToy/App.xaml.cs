@@ -1,4 +1,5 @@
-﻿using GenshinFishingToy.Core;
+﻿using Composition.WindowsRuntimeHelpers;
+using GenshinFishingToy.Core;
 using GenshinFishingToy.ViewModels;
 using Hardcodet.Wpf.TaskbarNotification;
 using Microsoft.Toolkit.Uwp.Notifications;
@@ -9,11 +10,13 @@ using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using Windows.System;
 
 namespace GenshinFishingToy;
 
 public partial class App : Application
 {
+    private DispatcherQueueController _controller;
     public static new App? Current { get; protected set; } = null!;
     public TaskbarIcon Taskbar { get; protected set; } = null!;
     public static bool IsElevated { get; } = GetElevated();
@@ -23,6 +26,7 @@ public partial class App : Application
         Logger.Info("Startup");
         Current = this;
         Current.DispatcherUnhandledException += (_, e) => e.Handled = true;
+        _controller = CoreMessagingHelper.CreateDispatcherQueueControllerForCurrentThread();
         AppDomain.CurrentDomain.UnhandledException += (s, e) => Logger.Error(e);
         ToastNotificationManagerCompat.OnActivated += NotifyIconViewModel.OnNotificationActivated;
         NoticeService.ClearNotice();

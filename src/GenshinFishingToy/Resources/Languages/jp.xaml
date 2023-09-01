@@ -19,12 +19,16 @@
     <s:String x:Key="Language">言語</s:String>
     <s:String x:Key="SupportedOSVersionTips">本プログラムはＯＳバージョンが{0}もしくはそれより高いＯＳバージョンのみサポートしています。あなたのＯＳバージョンは{1}です。</s:String>
     <s:String x:Key="OptionAutoLifting">自動リフティング</s:String>
+    <s:String x:Key="OptionShowRecognitionCapture">キャプチャ画像を表示（デバッグ）</s:String>
     <s:String x:Key="OptionShowRecognitionJigging">釣りの識別を表示（デバッグ）</s:String>
     <s:String x:Key="OptionShowRecognitionLifting">リフティングの識別を表示（デバッグ）</s:String>
     <s:String x:Key="RecognitionJiggingDebug">釣り識別デバッグ</s:String>
     <s:String x:Key="RecognitionLiftingDebug">リフティング識別デバッグ</s:String>
     <s:String x:Key="OptionLock">釣り枠をロック</s:String>
     <s:String x:Key="ResetJiggingRegion">釣り枠をリセット</s:String>
+    <s:String x:Key="ImageCaptureType">画像キャプチャモード</s:String>
+    <s:String x:Key="ImageCaptureTypeBitBlt">BitBlt (Windows 7 以降)</s:String>
+    <s:String x:Key="ImageCaptureTypeWindowsGraphicsCapture">Windows 10 (1903以降)</s:String>
     <s:String x:Key="NotStarted">スタート待ち</s:String>
     <s:String x:Key="Started">スタート済み</s:String>
     <s:String x:Key="OpenConfigFile">配置ファイルを開く</s:String>

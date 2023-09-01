@@ -29,11 +29,19 @@ internal class ImageJigging
 
     public bool IsRunning { get; protected set; } = false;
 
+    private Preview previewForm = null!;
+
     public ImageJigging()
     {
         timerCapture.Tick += Tick;
         timerCapture.Interval = Convert.ToInt32(1000d / frameRate);
         timerCapture.Start();
+        previewForm = new();
+
+        if (Settings.ShowRecognitionCapture.Get())
+        {
+            previewForm.Show();
+        }
     }
 
     public async Task StartFishing()
@@ -47,6 +55,7 @@ internal class ImageJigging
         IsRunning = false;
         findFishBoxTips = false;
         isFishingProcess = false;
+        ImageCapture.Teardown();
     }
 
     public async void Tick(object? sender, EventArgs e)
@@ -102,6 +111,7 @@ internal class ImageJigging
         ImageCapture.Setup(rect);
 
         using Bitmap captured = ImageCapture.Capture(window.Hwnd);
+        previewForm.SetImage(captured);
         rects = ImageRecognition.GetRect(captured, Settings.ShowRecognitionJigging);
 
         window.MotionArea.Rects = rects?.ToArray() ?? Array.Empty<Rect>();

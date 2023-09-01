@@ -72,7 +72,7 @@ namespace GenshinFishingToy.ViewModels
 
             foreach (KeyValuePair<string, string> arg in args)
             {
-                (string k, string v) = arg;
+                (string k, string v) = (arg.Key, arg.Value);
 
                 if (k == "" && v == "")
                 {

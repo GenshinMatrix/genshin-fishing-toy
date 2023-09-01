@@ -11,7 +11,9 @@ public class Settings
     public static SettingsDefinition<(int, int, int, int)> JigRect { get; } = new(nameof(JigRect), (100, 100, 450, 100));
     public static SettingsDefinition<bool> FullScreenWhenSaved { get; } = new(nameof(FullScreenWhenSaved), false);
     public static SettingsDefinition<bool> Lock { get; } = new(nameof(Lock), false);
+    public static SettingsDefinition<string> CaptureType { get; } = new(nameof(CaptureType), "WindowsGraphicsCapture");
     public static SettingsDefinition<bool> AutoLifting { get; } = new(nameof(AutoLifting), true);
+    public static SettingsDefinition<bool> ShowRecognitionCapture { get; } = new(nameof(ShowRecognitionCapture), false);
     public static SettingsDefinition<bool> ShowRecognitionJigging { get; } = new(nameof(ShowRecognitionJigging), false);
     public static SettingsDefinition<bool> ShowRecognitionLifting { get; } = new(nameof(ShowRecognitionLifting), false);
 }

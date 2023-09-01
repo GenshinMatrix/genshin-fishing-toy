@@ -1,74 +1,85 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows10.0.18362.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-    <Platforms>x64</Platforms>
-    <AssemblyVersion>1.4.1</AssemblyVersion>
-    <FileVersion>1.4.1</FileVersion>
-    <Version>$(VersionPrefix)1.4.1</Version>
-    <Authors>GenshinMatrix</Authors>
-    <Company>GenshinMatrix</Company>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <StartupObject></StartupObject>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net48</TargetFramework>
+        <Nullable>enable</Nullable>
+	    <LangVersion>11.0</LangVersion>
+        <UseWPF>True</UseWPF>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <Platforms>x64</Platforms>
+        <AssemblyVersion>1.5.0</AssemblyVersion>
+        <FileVersion>1.5.0</FileVersion>
+        <Version>$(VersionPrefix)1.5.0</Version>
+        <Authors>GenshinMatrix</Authors>
+        <Company>GenshinMatrix</Company>
+        <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+        <StartupObject></StartupObject>
+    </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <NoWarn>1701;1702;1998;</NoWarn>
-    <DefineConstants>$(DefineConstants)TRACE;</DefineConstants>
-  </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+        <NoWarn>1701;1702;1998;</NoWarn>
+        <DefineConstants>$(DefineConstants)TRACE;</DefineConstants>
+    </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <NoWarn>1701;1702;1998;</NoWarn>
-    <DefineConstants>$(DefineConstants)TRACE;</DefineConstants>
-  </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+        <NoWarn>1701;1702;1998;</NoWarn>
+        <DefineConstants>$(DefineConstants)TRACE;</DefineConstants>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Resources\demo.gif" />
-    <None Remove="Resources\demo.png" />
-    <None Remove="Resources\favicon.ico" />
-    <None Remove="Resources\hydro.svg" />
-    <None Remove="Resources\segoe-fluent-icons.ttf" />
-    <None Remove="Resources\squircle.svg" />
-  </ItemGroup>
+    <ItemGroup>
+        <None Remove="Resources\demo.gif" />
+        <None Remove="Resources\demo.png" />
+        <None Remove="Resources\favicon.ico" />
+        <None Remove="Resources\hydro.svg" />
+        <None Remove="Resources\segoe-fluent-icons.ttf" />
+        <None Remove="Resources\squircle.svg" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="Resources\demo.gif" />
-  </ItemGroup>
+    <ItemGroup>
+        <Resource Include="Resources\demo.gif" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="7.0.1" />
-    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.2" />
-    <PackageReference Include="ModernWpfUI" Version="0.9.6" />
-    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
-    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
-    <PackageReference Include="OpenCvSharp4.Extensions" Version="4.6.0.20220608" />
-    <PackageReference Include="System.IO.Abstractions" Version="17.2.3" />
-    <PackageReference Include="System.Management" Version="6.0.0" />
-    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
-    <PackageReference Include="YamlDotNet" Version="12.0.2" />
-    <PackageReference Include="SharpVectors" Version="1.8.0" />
-    <PackageReference Include="OpenCvSharp4" Version="4.6.0.20220608" />
-    <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.6.0.20220608" />
-    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
-    <PackageReference Include="SharpVectors" Version="1.8.0" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+		<PackageReference Include="Costura.Fody" Version="5.7.0" Condition=" '$(Configuration)' == 'Release'">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>compile; runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+        <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.3" />
+        <PackageReference Include="ModernWpfUI" Version="0.9.6" />
+        <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
+        <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+        <PackageReference Include="OpenCvSharp4.Extensions" Version="4.8.0.20230708" />
+        <PackageReference Include="System.IO.Abstractions" Version="19.2.69" />
+        <PackageReference Include="System.Management" Version="7.0.2" />
+        <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+        <PackageReference Include="YamlDotNet" Version="13.3.1" />
+        <PackageReference Include="SharpVectors" Version="1.8.0" />
+        <PackageReference Include="OpenCvSharp4" Version="4.8.0.20230708" />
+        <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.8.0.20230708" />
+        <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+        <PackageReference Include="SharpVectors" Version="1.8.0" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <Page Include="App.xaml" />
-  </ItemGroup>
+    <ItemGroup>
+        <Page Include="App.xaml" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="Resources\demo.png" />
-    <Resource Include="Resources\favicon.ico" />
-    <Resource Include="Resources\hydro.svg" />
-    <Resource Include="Resources\segoe-fluent-icons.ttf" />
-    <Resource Include="Resources\squircle.svg" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\WindowsGraphicsCapture\CaptureSampleCore\CaptureSampleCore.csproj" />
+        <ProjectReference Include="..\WindowsGraphicsCapture\Composition.WindowsRuntimeHelpers\Composition.WindowsRuntimeHelpers.csproj" />
+        <ProjectReference Include="..\WindowsGraphicsCapture\ScreenCapture\ScreenCapture.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Resource Include="Resources\demo.png" />
+        <Resource Include="Resources\favicon.ico" />
+        <Resource Include="Resources\hydro.svg" />
+        <Resource Include="Resources\segoe-fluent-icons.ttf" />
+        <Resource Include="Resources\squircle.svg" />
+    </ItemGroup>
 
 </Project>
